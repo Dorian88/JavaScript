@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Condicional If</title>
+        <script>
+			var precioCarro = 60000;
+			var dineroAhorrado = prompt("Introduce cuanto dinero tienes ahorrado");
+			var edad = prompt("Introduce tu edad");
+			var loteria = prompt("Has ganado la loteria?");
+			
+			if(dineroAhorrado >= precioCarro && edad >= 18){
+				alert("Puedes comprar el carro");
+			}else{
+				alert("No puedes comprar el carro");
+			}
+			
+			if(dineroAhorrado >= precioCarro || loteria == "si"){
+				alert("Puedes comprar el carro");
+			}else{
+				alert("No puedes comprar el carro");
+			}
+			
+			alert("Se continua con la programacion del programa");
+        </script>
+	</head>
+
+	<body>
+    <script>
+    </script>
+	</body>
+</html>
