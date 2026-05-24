@@ -39,16 +39,26 @@
         
         <script>
 			var cuerpo = document.getElementById("cuerpo");
-			var colorWeb = prompt("Introduce el color del fondo. Azul/Verde/Rojo");
+			var colorWeb = prompt("Introduce el color del fondo. Azul/Verde/Rojo").toLowerCase();
 			
-			if(colorWeb == "Azul"){
+			/*if(colorWeb == "azul"){
 				cuerpo.style.backgroundColor = "blue";
-			}else if(colorWeb == "Rojo"){
+			}else if(colorWeb == "rojo"){
 				cuerpo.style.backgroundColor = "red";
-			}else if(colorWeb == "Verde"){
+			}else if(colorWeb == "verde"){
 				cuerpo.style.backgroundColor = "green";
 			}else{
 				alert("Ese color no esta contemplado");
+			}*/
+			
+			if(colorWeb != "azul" && colorWeb != "verde" && colorWeb != "rojo"){
+				alert("Ese color no esta contemplado");
+			}else if(colorWeb == "azul"){
+				cuerpo.style.backgroundColor = "blue";
+			}else if(colorWeb == "rojo"){
+				cuerpo.style.backgroundColor = "red";
+			}else{
+				cuerpo.style.backgroundColor = "green";
 			}
         </script>
 	</body>

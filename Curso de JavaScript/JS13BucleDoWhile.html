@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo Do While</title>
+        
+        <style>
+			#contenedor{
+				width: 25%;
+				background-color: #FFC;
+				margin:auto;
+				padding:15px;
+			}
+        </style>
+        <script>
+			var nombre, edad, ciudad;
+			
+			do{
+				nombre = prompt("Introduce tu nombre", "Nombre");
+			}while(!isNaN(nombre))
+			
+			do{
+				edad = prompt("Introduce una edad valida (0 - 105)", "Edad");
+			}while(edad <= 0 || edad > 105 || isNaN(edad))
+			
+			do{
+				ciudad = prompt("Introduce tu ciudad", "Ciudad");
+			}while(!isNaN(ciudad))
+        </script>
+	</head>
+
+	<body>
+    	<div id = "contenedor">
+        	<p>Nombre:
+            	<script>
+					document.write(nombre);
+                </script>
+            </p>
+            <p>Edad:
+            	<script>
+					document.write(edad);
+                </script>
+            </p>
+            <p>Ciudad:
+            	<script>
+					document.write(ciudad);
+                </script>
+            </p>
+        </div>
+	</body>
+</html>

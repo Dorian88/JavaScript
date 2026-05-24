@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo While</title>
+        
+        <style>
+			#contenedor{
+				width: 25%;
+				background-color: #FFC;
+				margin:auto;
+				padding:15px;
+			}
+        </style>
+        <script>
+			var nombre, edad, poblacion;
+			
+			nombre = prompt("Introduce tu nombre por favor");
+			while(!isNaN(nombre)){
+				nombre = prompt("El nombre no debe ser numérico");
+			}
+			edad = prompt("Introduce tu edad por favor");
+			while(edad <= 0 || edad > 105 || isNaN(edad)){
+				edad = prompt("Introduce una edad validad (0 - 105)");
+			}
+			poblacion = prompt("Introduce población");
+			while(!isNaN(poblacion)){
+				poblacion = prompt("El población no debe ser numérico");
+			}
+        </script>
+	</head>
+
+	<body>
+    	<div id = "contenedor">
+        	<p>Nombre:
+            	<script>
+					document.write(nombre);
+                </script>
+            </p>
+            <p>Edad:
+            	<script>
+					document.write(edad);
+                </script>
+            </p>
+            <p>Población:
+            	<script>
+					document.write(poblacion);
+                </script>
+            </p>
+        </div>
+	</body>
+</html>

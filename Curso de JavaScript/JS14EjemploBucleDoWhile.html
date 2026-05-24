@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo Do While - Aleatorio</title>
+	</head>
+
+	<body>
+    	<table width="25%" border = "0">
+        	<tr>
+            	<td><label for="textfield"></label>
+                <input type="text" name="textfield" id="c_mensaje"></td>
+                <td><label for="textfield2"></label>
+                <input type="text" name="textfield2" id="c_intentos"></td>
+            </tr>
+        </table>
+        
+        <script>
+			var aleatorio = Math.round(Math.random()*100);
+			var minum = 0, intentos = 0;
+			var mensaje = document.getElementById("c_mensaje")
+			var intentosConsumidos = document.getElementById("c_intentos")
+			do{
+				minum = prompt("Introduce un numero entre 0 y 100");
+				
+				if(aleatorio > minum){
+					mensaje.value = "Mas Alto";
+					mensaje.style.fontSize = "18px";
+				}
+				
+				if(aleatorio < minum){
+					mensaje.value = "Más bajo";
+					mensaje.style.fontSize = "18px";
+				}
+				
+				intentos++;
+				intentosConsumidos.value = intentos;
+				intentosConsumidos.style.fontSize = "18px";
+				intentosConsumidos.style.color = "red";
+				intentosConsumidos.style.textAlign = "center";
+			}while(aleatorio != minum);
+			
+			document.write("Haz acertado en " + intentos + " intentos.");
+        </script>
+	</body>
+</html>
