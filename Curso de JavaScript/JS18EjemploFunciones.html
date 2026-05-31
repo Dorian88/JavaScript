@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo Funciones</title>
+        
+		<script>
+			function escribeNombre(nombre){
+				document.write(nombre);
+			}
+			
+			var miNombre = prompt("Escribe tu nombre");
+        </script>
+        
+	</head>
+
+	<body>
+    	<p style="font-size:24px; font-weight:bold">Hola: <script>escribeNombre(miNombre)</script>. Bienvenido a mi página web</p>
+        <p>Esta es una pagina web que hace uso de las funciones con paso de parámetros en JavaScript. <script>escribeNombre(miNombre)</script>, la sintaxis de como se hace es "nombreFuncion(parámetro)"</p>
+	</body>
+</html>

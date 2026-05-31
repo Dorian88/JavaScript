@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Calculadora</title>
+        
+		<script>
+			
+			var repetir = "si";
+			
+			function suma(num1, num2){
+				document.write("La suma es: " + (num1 + num2));
+			}
+			
+			function resta(num1, num2){
+				document.write("La resta es: " + (num1 - num2));
+			}
+			
+			function multiplicacion(num1, num2){
+				document.write("La multiplicación es: " + (num1 * num2));
+			}
+			
+			function division(num1, num2){
+				document.write("La división es: " + (num1 / num2));
+			}
+			
+			do{
+				var operacion = prompt("¿Qué operación deseas realizar?");
+				var op1 = parseInt(prompt("Introduce el primer número"));
+				var op2 = parseInt(prompt("Introduce el segundo número"));
+			
+				if(operacion == "sumar"){
+					suma(op1, op2);
+				}else if(operacion == "restar"){
+					resta(op1, op2);
+				}else if(operacion == "multiplicar"){
+					multiplicacion(op1, op2);
+				}else if(operacion == "dividir"){
+					division(op1, op2);
+				}else{
+					document.write("La operación no está contemplada");
+				}
+				
+				repetir = prompt("¿deseas repetir?");
+				document.write("<br/>");
+				
+			}while(repetir == "si");
+			
+			
+        </script>
+        
+	</head>
+
+	<body>
+	</body>
+</html>
