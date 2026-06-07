@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Agregando Texto</title>
+        
+        <style>
+			.micontenedor{
+				background-color: #0F0;
+			}
+        </style>
+        
+		<script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+			$(document).ready(function(){
+                //alert($("#errores h2").html()); //Sustituye el texto existente manipulando código html
+				//La funcion .text hace lo mismo que html pero no puede manipular código html
+				
+				$("#errores").append("<p> Hay errores en el formulario</p>"); //Agrega despues dentro del elemento
+				$("#errores").prepend("<p> Llena el formulario</p>"); //Agrega antes dentro del elemento
+				$("#errores").before("<p> Agrega antes afuera del elemento</p>");
+				$("#errores").after("<p> Agrega después afuera del elemento</p>");
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<div id = "contenedor">
+        	<div id = "errores" class = "micontenedor">
+        		<h2>Errores</h2>
+            </div>
+        </div>
+	</body>
+</html>

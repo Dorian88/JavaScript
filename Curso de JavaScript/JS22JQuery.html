@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Usando JQuery</title>
+        
+        <style>
+			#anuncio{
+				background-color: #000;
+				color: #FFF;
+				font-size: 24px;
+			}
+        
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+			$(document).ready(function() {
+                $("#carrete img").hide().fadeIn(5000); //Oculta y muestra elementos 
+            });
+        </script>
+        
+        <script>
+			$(document).ready(function() {
+                $("#anuncio").width(500).height(500).text("¡VENDE!").hide().fadeIn(10000); //Funciones encadenadas
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<div id = "carrete">
+            <img src = "Imagenes/Silueta cara.jpg", width = "250" height= "175">
+            &nbsp;
+            <img src = "Imagenes/slipknot.jpg", width = "250" height= "175">
+            &nbsp;
+            <img src = "Imagenes/Jhon Wick.jpg", width = "250" height= "175">
+            &nbsp;
+            <img src = "Imagenes/Krillin Falcon.jpg", width = "250" height= "175">
+        </div>
+        
+        <!--<script>
+			var imagenes = document.querySelectorAll("#carrete img");
+			
+			for(var i = 0; i < imagenes.length; i++){
+				imagenes[i].style.visibility = "hidden";
+			}
+        </script>-->
+        
+        <div id = "anuncio">
+            ¡COMPRA!
+        </div>
+        
+        <!--<script>
+			var anuncio = document.getElementById("anuncio");
+			
+			anuncio.style.width = "500px";
+			anuncio.style.height = "500px";
+			
+			anuncio.innerHTML = "¡Vende!"
+        </script>-->
+	</body>
+</html>
