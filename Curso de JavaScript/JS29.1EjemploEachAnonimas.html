@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo Funciones Each y Anonimas</title>
+        
+        <style>
+			h1{
+				text-align: center;
+			}
+			
+			p{
+				font-size:22px;
+				font-family:Verdana, Geneva, sans-serif;
+				text-align:justify;
+			}
+			
+			#links{
+				width:20%;
+				margin-left:45px;
+				border:dashed #900 2px;
+				float:left;
+				padding-bottom:200px;
+				padding-left:20px;
+			}
+			
+			#links h2{
+				text-align: center;
+			}
+			
+			#ultimos{
+				width:75%;
+				float:left;
+			}
+			
+			li{
+				font-weight:bold;
+				font-size:18px
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                $("a[href^='https://']").each(function() {
+                    var linkexterno = $(this).attr("href");
+					$("#links").append("<li>" + linkexterno + "</li>");
+                });
+            });
+			
+			
+        </script>
+        
+	</head>
+
+	<body>
+    	<h1>Utilizando la función Each</h1>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sem sem. Etiam fermentum mollis augue ut cursus.
+        Quisque venenatis mollis justo non auctor. Nam gravida leo <a href = "https://www.gmail.com">Ir a Gmail</a> arcu, et
+        ultricies nulla scelerisque a. Aenean ut eros gravida, feugiat sapien nec, dictum urna. Integer vitae enim vestibulum est
+        porta faucibus. Duis lectus dolor, luctus non magna id, porta tincidunt velit. Donec ac lacinia elit, at ultrices eros. In
+        molestie dictum dui ut tincidunt. Vivamus quam sem, fringilla in dapibus quis, mollis nec nibh. Donec molestie malesuada
+        nulla, ut bibendum urna feugiat sed. Duis est augue, pellentesque a luctus in, facilisis eget diam. Cras erat ligula,
+        commodo sit amet dapibus venenatis, maximus eget nibh.Vestibulum molestie ipsum sit amet sem condimentum, vitae consequat
+        magna porta. Integer mollis convallis mi, feugiat lacinia sem euismod a. In hendrerit placerat consectetur.</p>
+        
+        <p>Nullam rhoncus, ligula consectetur viverra vulputate, nunc felis suscipit leo, ac aliquam ligula tortor ut sem. Aliquam
+        accumsan urna eget nunc efficitur aliquet. Fusce sollicitudin felis sem, vitae iaculis eros convallis consectetur. In eu
+        luctus nunc. Etiam fringilla magna a elit eleifend, vitae mattis massa iaculis. Vestibulum orci metus, pulvinar ac varius
+        eget, sagittis at libero. Duis quam elit, semper a vehicula sollicitudin, luctus quis turpis. Nullam egestas, lorem ac
+        blandit accumsan, lorem lacus viverra nibh, sit amet lacinia est metus quis tellus. Nulla facilisi. In vel tortor non
+        tellus cursus scelerisque ut suscipit lacus. Donec scelerisque ligula quis enim elementum, in tempus arcu eleifend. Fusce
+        in sagittis arcu. In condimentum maximus augue in consectetur.</p>
+        
+        <div id = "ultimos"><p>In placerat nibh non accumsan ultrices. Suspendisse <a href = "https://www.news.google.com">Ir a 
+        Google news</a> pretium, libero nec tincidunt gravida, turpis velit posuere eros, id efficitur turpis tortor sed leo.
+        Aenean porttitor mattis diam vitae rutrum. Nullam iaculis enim id nunc sodales, et facilisis purus pellentesque. Nunc ut
+        purus euismod tortor bibendum tempor id et orci. Vestibulum mollis lorem risus, eu tempus dolor rutrum vitae. Pellentesque
+        fermentum vestibulum enim, in gravida velit. Maecenas non vestibulum eros. Nam magna est, auctor vel luctus a, ultrices
+        sed magna. Nulla facilisis eros nec tempus cursus. Nulla facilisi. Aenean vitae venenatis ex. Vivamus eu ipsum commodo,
+        tempus nibh a, tristique nisi.</p>
+        
+        <p>Proin auctor neque sed mauris ullamcorper porttitor. Sed egestas, tortor sed aliquam semper, nunc purus porta libero,
+        quis gravida mauris arcu et nisi. Nam eget fringilla felis. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia curae; Mauris ullamcorper tempor <a href = "https://www.google.com/maps">Ir a maps</a> purus. Sed
+        pretium metus quis mauris mollis, sit amet bibendum nisi commodo. Ut et nunc finibus, vulputate est vel, sodales urna.
+        Morbi nec tempus ipsum, et fringilla lorem. Vestibulum volutpat erat turpis, eu pretium leo auctor dictum. Vestibulum
+        molestie lobortis odio, ut pharetra ante porta ut. Aliquam erat volutpat. Aenean condimentum mi sit amet erat aliquet
+        euismod. Aliquam et tempus tellus.</p>
+        
+        <p>Maecenas commodo pellentesque dolor, a dapibus neque maximus id. Curabitur luctus lectus neque, ac tristique sapien
+        laoreet tincidunt. Proin sagittis iaculis metus, at placerat neque porta at. Integer quis neque non arcu gravida elementum
+        vel sed lorem. Morbi ac condimentum mi, vitae mollis lectus. Pellentesque sed vehicula risus. Nunc ac pretium felis.
+        Vestibulum ac maximus urna, quis efficitur arcu. Cras luctus turpis augue, eget egestas felis posuere eget. Cras nulla
+        augue, congue ac est quis, consequat volutpat lectus. Ut vitae nisi tortor. Sed porttitor, justo vitae efficitur rhoncus,
+        ex erat maximus mauris, sed pellentesque est augue non libero. Mauris ac nibh a arcu finibus porttitor. Nullam elementum
+        in ex eu interdum. Curabitur dolor lorem, semper ac tincidunt ac, posuere viverra purus.</p></div>
+        <div id="links">
+        	<h2>Links Utilizados</h2>
+        </div>
+	</body>
+</html>

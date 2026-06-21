@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Leyendo y Cambiando Atributos</title>
+        
+        <style>
+			#primerParrafo{
+				background-color:#60C;
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			
+			$(document).ready(function() {
+                
+				var colorFondo = $("#primerParrafo").css("background-color");
+				//document.write(colorFondo);
+				
+				$("#segundoParrafo").css("background-color", "#960");
+				
+				$("p.destacado").css("border", "2px dotted green");
+            });
+			
+        </script>
+        
+	</head>
+
+	<body>
+    	<p id="primerParrafo">Primer párrafo</p>
+        <p id="segundoParrafo">Segundo párrafo</p>
+        <p class = "destacado">Tercer párrafo</p>
+	</body>
+</html>

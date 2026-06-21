@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Eventos</title>
+        
+        <style>
+			h1{
+				text-align:center;
+			}
+			
+			body{
+				background-color: #C00;
+				color:#FFF;
+			}
+			
+			#principal{
+				width:60%;
+				margin:auto;
+			}
+			
+			a{
+				color:#FFF;
+				font: bold 20px Verdana, Geneva, sans-serif
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+			$(document).ready(function() {
+                $("html").dblclick(function(){
+					alert("Ayyyyyyy");
+				});
+				
+				$("a").mouseover(function(){
+					var mensaje = "<p> Estas pasando el mouse por encima del link</p>";
+					
+					$("#principal").append(mensaje);
+				});
+				
+				$("#elBoton").click(function(){
+					$(this).val("Para de hacer click!!!!");
+				});
+				
+				$("#elCampo").focus(function(){
+					$(this).val("Ahora vas a escribir algo");
+				});
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<div id = "principal">
+        	<h1>Introducción a eventos</h1>
+            
+            <p>
+            	<a href="#">Un Link</a>
+            </p>
+            
+            <form action="#" method="get">
+            	<fieldset><legend>Formulario</legend>
+                	<p>
+                    	<input name="button" type = "button" id="elBoton" value="Un Botón">
+                    </p>
+                    <p>
+                    	<input name="textfield" type = "text" id="elCampo">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+	</body>
+</html>

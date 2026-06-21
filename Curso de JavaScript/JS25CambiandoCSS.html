@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Cambiando Atributos CSS</title>
+        
+        <style>
+			.linkdestacacursos{
+				color:#F00;
+				font-weight:bold;
+				margin-left:25px;
+			}
+			
+			a{
+				display:block;
+				margin-bottom: 20px;
+				font-size:24px;
+			}
+			
+			table{
+				text-align:center;
+				border:none;
+			}
+			
+			td{
+				border:none;
+			}
+			
+			#contieneEnlaces{
+				position: absolute;
+				left:31px;
+				top:65px;
+				width:400px;
+				height:649px;
+				z-index:1;
+				padding-top:100px
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			
+			$(document).ready(function(){
+                
+				//$("a[href^='https://']").addClass("linkdestacacursos");
+				
+				document.getElementById("cursos").addEventListener("click", resaltaCursos, false);
+				document.getElementById("informacion").addEventListener("click", resaltaEjemplos, false);
+				document.getElementById("futbol").addEventListener("click", resaltaFutbol, false);
+				
+            });
+			
+			function resaltaCursos(){
+				
+				/*$(".informacion").removeClass("linkdestacacursos");
+				$(".cursos").addClass("linkdestacacursos");*/
+				
+				$(".cursos").toggleClass("linkdestacacursos");
+			}
+			
+			function resaltaEjemplos(){
+				
+				/*$(".cursos").removeClass("linkdestacacursos");
+				$(".informacion").addClass("linkdestacacursos");*/
+				
+				$(".informacion").toggleClass("linkdestacacursos");
+			}
+			
+        </script>
+        
+	</head>
+
+	<body>
+    	<div id = "contieneEnlaces">
+        	<a href="https://www.udea.edu.co/" target="_blank" class="cursos">Universidad de Antioquia</a><br/>
+            <a href="https://www.google.com/" target="_blank" class="informacion">Google</a><br/>
+            <a href="https://www.youtube.com/" target="_blank" class="cursos">Youtube</a><br/>
+            <a href="http://dimayor.com.co/" target="_blank">Dimayor</a><br/>
+            <a href="http://www.conmebol.com/" target="_blank" class="informacion">Conmebol</a><br/>
+            <a href="http://es.fifa.com/" target="_blank">FIFA</a><br/>
+        </div>
+            
+            <table>
+            	<tr>
+                	<td>Cursos destacados &nbsp;&nbsp;<input type="checkbox" value="Cursos" id="cursos"></td>
+                    <td>Información adicional &nbsp;&nbsp;<input type="checkbox" value="Información" id="informacion"></td>
+                </tr>
+            </table>
+        </div>
+	</body>
+</html>

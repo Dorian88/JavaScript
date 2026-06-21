@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo 1 Leyendo y Cambiando Atributos</title>
+        
+        <style>
+			h1{
+				text-align:center;
+			}
+			
+			div{
+				width:20%;
+				margin: 0 75px;
+				float:left;
+				border:#09C solid 2px;
+				padding:10px;
+			}
+			
+			table{
+				width:100%;
+				margin-top:10px;
+			}
+        </style>
+        
+		<script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                			
+				var botones = document.querySelectorAll("input");
+				
+				for(var i = 0; i < botones.length; i++){
+					botones[i].addEventListener("click", modoLectura, false);
+				}
+            });
+			
+			function modoLectura(e){
+				
+				var zonaActuacion;
+								
+				if(e.target == m_lectura1){
+					zonaActuacion  = "#noticia1";
+				}else if(e.target == m_lectura2){
+					zonaActuacion  = "#noticia2";
+				}else if(e.target == m_lectura3){
+					zonaActuacion  = "#noticia3";
+				}
+				
+				$(zonaActuacion).css({"background-color" : "#000",
+									  "font-size" : "20px",
+									  "text-align" : "justify",
+									  "color" : "#FFF"});
+			}
+			
+			function disminuir(e){
+				var zonaActuacion;
+								
+				if(e.target == disminuye1){
+					zonaActuacion  = "#noticia1";
+				}else if(e.target == disminuye2){
+					zonaActuacion  = "#noticia2";
+				}else if(e.target == disminuye3){
+					zonaActuacion  = "#noticia3";
+				}
+				
+				var tamDefecto=$(zonaActuacion).css("font-size");
+				
+				tamDefecto = parseFloat(tamDefecto);
+				
+				$(zonaActuacion).css("font-size", tamDefecto*0.95);
+			}
+        </script>
+        
+	</head>
+
+	<body>
+    	
+        <h1>NOTICIAS</h1>
+        
+        <div id="noticia1">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet tortor tincidunt, sollicitudin purus eget,
+        placerat erat. Quisque blandit risus sit amet arcu volutpat volutpat. Morbi efficitur iaculis quam, eget euismod dolor
+        interdum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque
+        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis bibendum elit id eleifend auctor.
+        Sed et eros id quam tempus dignissim eget nec sapien. Sed ac nisi ligula. Vestibulum vestibulum risus arcu, lobortis porta
+        eros venenatis nec. Sed molestie orci id tortor pharetra rutrum vel in libero. Maecenas ex eros, dignissim ac nulla vel,
+        scelerisque accumsan erat."
+        <table>
+        	<tr>
+            	<td style="text-align:center">
+                	<input type="button" value="Modo Lectura" id="m_lectura1">
+                </td>
+            </tr>
+        </table>
+        </div>
+        
+        <div id="noticia2">
+        "Vestibulum id arcu dui. Quisque pharetra, orci nec lacinia laoreet, eros arcu varius lacus, ac pretium erat neque a mi.
+        Proin interdum neque eu libero tincidunt, non feugiat lectus venenatis. Vivamus fermentum malesuada lorem. Mauris et risus
+        interdum, tincidunt felis vitae, cursus enim. Sed ornare augue vel dapibus iaculis. Duis et sapien id libero congue
+        scelerisque. Curabitur et commodo risus. Donec et bibendum justo. Vestibulum ut lectus sit amet nibh ornare mollis sed et
+        sem. Nunc pulvinar justo sit amet placerat tristique. Nunc posuere tempor libero vel eleifend. Proin vehicula mollis
+        scelerisque. Ut id vestibulum mauris, ac feugiat sem."
+        <table>
+        	<tr>
+            	<td style="text-align:center">
+                	<input type="button" value="Modo Lectura" id="m_lectura2">
+                </td>
+            </tr>
+        </table>
+        </div>
+        
+        <div id="noticia3">
+        "Aliquam porttitor quam eu est finibus gravida. Aliquam erat volutpat. Quisque efficitur tortor nec maximus tristique.
+        Morbi mattis, augue id scelerisque aliquam, magna mi convallis justo, a facilisis purus neque eu nisi. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla pharetra purus purus, eget iaculis lectus
+        pharetra ut. Integer ornare, elit vel congue sagittis, velit dolor rutrum mi, id interdum arcu ipsum non tortor. Praesent
+        semper dapibus risus, a maximus eros dapibus at."
+        <table>
+        	<tr>
+            	<td style="text-align:center">
+                	<input type="button" value="Modo Lectura" id="m_lectura3">
+                </td>
+            </tr>
+        </table>
+        </div>
+        
+	</body>
+</html>
