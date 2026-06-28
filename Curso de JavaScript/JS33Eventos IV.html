@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Eventos IV</title>
+        
+        <style>
+			body{
+				background-color:#900;
+				color:#FFF;
+			}
+			
+			h3{
+				background: url(Imagenes/Open.png) no-repeat 0 11px;
+				padding: 10px 0 0 25px;
+				cursor: pointer;
+			}
+			
+			h3.cerrar{
+				background-image: url(Imagenes/Close.png);
+			}
+			
+			.respuesta{
+				margin-left: 25px;
+			}
+			
+			.titulo{
+				text-align:center;
+			}
+			
+			principal{
+				margin-left:200px;
+				margin-top: 150px
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                $(".respuesta").hide();
+				
+				$(".principal h3").toggle(function(){
+					$(this).next(".respuesta").fadeIn();
+					$(this).addClass("cerrar");
+				}, function(){
+					$(this).next(".respuesta").fadeOut();
+					$(this).removeClass("cerrar");
+				});
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<div>
+        	<p><img src="Imagenes/Silueta cara.jpg" width="100px" height="100px"></p>
+            <h1 class="titulo">Curso de Programación FAQ</h1>
+        </div>
+        
+        <div class="principal">
+        	<h2>Preguntas Frecuentes</h2>
+            
+            <h3>1. ¿Qué es la programación?</h3>
+            <div class="respuesta">Es el proceso de crear instrucciones (código) para que una computadora realice determinadas tareas.</div>
+            
+            <h3>2. ¿Qué es un lenguaje de programación?</h3>
+            <div class="respuesta">Es un lenguaje formal que permite escribir instrucciones para desarrollar aplicaciones, páginas web, videojuegos, entre otros.</div>
+            
+            <h3>3. ¿Cuál es el mejor lenguaje para aprender a programar?</h3>
+            <div class="respuesta">Depende del objetivo. Python es muy recomendado para principiantes por su sintaxis sencilla.</div>
+            
+            <h3>4. ¿Necesito ser bueno en matemáticas para programar?</h3>
+            <div class="respuesta">No necesariamente. Para la mayoría de áreas basta con conocimientos básicos de lógica y matemáticas. Algunas especialidades sí requieren matemáticas avanzadas.</div>
+            
+            <h3>5. ¿Qué diferencia hay entre frontend y backend?</h3>
+            <div class="respuesta">Frontend: Parte visual con la que interactúa el usuario.
+Backend: Parte encargada del procesamiento de datos y la lógica del sistema.</div>
+            
+            <h3>6. ¿Qué es un algoritmo?</h3>
+            <div class="respuesta">Es una secuencia ordenada de pasos para resolver un problema o realizar una tarea.</div>
+            
+            <h3>7. ¿Qué es una variable?</h3>
+            <div class="respuesta">Es un espacio en memoria donde se almacena información que puede cambiar durante la ejecución del programa.</div>
+            
+            <h3>8. ¿Qué es un compilador?</h3>
+            <div class="respuesta">Es un programa que traduce el código fuente a lenguaje máquina para que pueda ser ejecutado.</div>
+            
+            <h3>9. ¿Qué es un error de sintaxis?</h3>
+            <div class="respuesta">Es un error causado por escribir incorrectamente las instrucciones del lenguaje de programación.</div>
+            
+            <h3>10. ¿Qué es un bug?</h3>
+            <div class="respuesta">Es un defecto o error en un programa que produce resultados inesperados.</div>
+        </div>
+   </body>
+</html>

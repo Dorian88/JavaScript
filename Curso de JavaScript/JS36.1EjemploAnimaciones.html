@@ -1,0 +1,103 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Animaciones</title>
+        
+        <style>
+			#menu{
+				position:absolute;
+				left: -200px;
+				top: 0px;
+				width: 213px;
+				height: 232px;
+				background-color: #FF9;
+				padding: 15px;
+			}
+			
+			#boton{
+				position:absolute;
+				left: 216px;
+				top: 5px;
+				width: 21px;
+				height: 25px;
+				z-index: 1;
+				cursor:pointer;
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                $("#boton").toggle(function(){
+						$("#menu").animate(
+							{
+								left:"0px"
+							}
+						);
+					}, function(){
+						$("#menu").animate(
+							{
+								left:"-210px"
+							}
+						);
+				});
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<p style="margin-left:50px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac erat et velit faucibus 		vehicula. Vivamus semper lacus quam, at sollicitudin mi tristique ac. Aenean quis fringilla nisi, et feugiat nibh.
+        Maecenas id elit quis nibh ultricies accumsan eu vel ex. Nulla ligula dolor, posuere vitae nibh ut, facilisis auctor
+        tortor. Vestibulum cursus tortor mi, eget lacinia lectus ultrices eget. Etiam sit amet quam et lorem tincidunt rhoncus id
+        ac libero. Phasellus vitae sapien elit. Suspendisse sit amet sapien elit. Vestibulum vulputate pellentesque diam eget
+        auctor. Duis pretium laoreet felis a facilisis. Sed dictum lacinia commodo. Vestibulum ante ipsum primis in faucibus orci
+        luctus et ultrices posuere cubilia curae; Sed a nisi vitae quam bibendum placerat.</p>
+
+		<p style="margin-left:50px">Aliquam tristique odio sed arcu viverra egestas. Aenean sit amet fringilla leo, sed egestas
+        tellus. Mauris scelerisque egestas lorem, eu posuere nisi fermentum dictum. Fusce mattis tincidunt dolor eu porta. Fusce
+        quis eleifend erat, nec facilisis ante. Fusce sed ligula vel mi ornare dictum pulvinar quis ex. Maecenas dui ante,
+        condimentum ac massa id, lacinia mollis felis. Proin ultricies a risus nec viverra. Sed eu lorem erat.</p>
+
+		<p style="margin-left:50px">Vestibulum risus urna, bibendum vitae odio in, pharetra pulvinar enim. Sed lacinia, sem ut
+        porta tincidunt, nisi eros scelerisque massa, ut viverra enim nibh vel justo. Praesent in nisl nec ante luctus molestie.
+        Sed et bibendum magna. Sed convallis diam ipsum, vel ultricies sem porta vel. Duis sed diam ac lorem vehicula rhoncus.
+        Vestibulum id mi malesuada, dignissim tortor eget, iaculis tellus. Sed tincidunt dui sit amet nisi vulputate scelerisque.
+        Nulla ac erat lacus. Cras bibendum ante vitae mi tempor scelerisque. Cras porttitor felis sapien, vel pellentesque orci
+        sagittis nec. Ut a vehicula ante, quis vehicula dolor. Vestibulum sed eros et ante rutrum euismod. Suspendisse et massa
+        tellus. Sed nec venenatis velit. Sed suscipit, nisi sit amet tempus egestas, urna turpis scelerisque nisl, et pellentesque
+        mauris leo non libero.</p>
+
+		<p>Ut nunc odio, tristique in mauris sed, iaculis fermentum tortor. Orci varius natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vulputate aliquet lorem, sit amet rutrum neque ultricies
+        non. In hac habitasse platea dictumst. Cras gravida arcu risus, eget pellentesque quam euismod ac. Ut iaculis ex diam, at
+        tempus nulla finibus a. Integer consequat vulputate elit quis semper. Quisque nec aliquam tortor, in blandit ex. Donec
+        condimentum ante lectus, quis aliquam justo ullamcorper quis. Nulla non dolor ligula.</p>
+
+		<p>Nam pulvinar magna a leo sodales venenatis. Integer vestibulum nec lacus ut eleifend. Proin
+        luctus, nulla at blandit placerat, odio est vestibulum lectus, a pulvinar ante nunc in sapien. Maecenas ac ipsum metus.
+        Sed finibus at sem non mollis. Cras et vulputate metus, condimentum consequat ipsum. Vestibulum ipsum dolor, pretium et
+        pretium sed, pellentesque non elit. Donec consectetur lacinia vestibulum. Morbi purus nisi, elementum a volutpat et,
+        mollis eget massa. Vestibulum rutrum nibh ut posuere accumsan. Phasellus massa lorem, volutpat quis convallis vel, tempor
+        id enim. Aliquam erat volutpat. Nunc porta massa velit, efficitur viverra mi laoreet in. Vivamus sit amet congue magna.
+        Mauris viverra elementum libero, quis porta risus egestas sollicitudin.</p>
+
+		<p>Proin dapibus vitae est rutrum luctus. Mauris ut nunc eget nulla blandit malesuada eu quis mauris. Proin ullamcorper,
+        tellus et facilisis sodales, magna mi tincidunt elit, malesuada tempus neque purus eu erat. Nunc vitae ipsum euismod,
+        laoreet lectus a, laoreet dui. Suspendisse mattis nisl mauris, vel fringilla augue consequat vel. Duis euismod, turpis
+        quis hendrerit maximus, tortor diam sodales augue, eget imperdiet augue nibh eu enim. Nullam a ante eu metus gravida
+        accumsan. Vivamus quis lorem non justo suscipit vulputate sed quis sem. Maecenas non est non nibh accumsan efficitur non
+        sed mi. Sed imperdiet pellentesque nisi.</p>
+		
+        <div id="menu">
+        	<div id="boton">X</div>
+            <p>Menú</p>
+            <p>Opción 1</p>
+            <p>Opción 2</p>
+            <p>Opción 3</p>
+            <p>Opción 4</p>      	
+        </div>
+	</body>
+</html>

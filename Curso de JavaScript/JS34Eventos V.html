@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Eventos VI</title>
+        
+        <style>
+			table{
+				text-align:center;
+				float:right;
+				margin-right:50px;
+			}
+			
+			p{
+				font-size:1.3em;
+			}
+			
+			#imagenGrande{
+				position:absolute;
+				margin-left:auto;
+				margin-right:auto;
+				left:0;
+				right:0;
+				width:700px;
+				height:405px;
+				z-index: 1;
+				border:dotted 5px #300;
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+            	var v_img1 = $("#imagen1").attr("src");
+				
+				$("#imagenGrande").hide();
+				$("#imagen1").bind("click", v_img1, abreImagen);    
+            });
+			
+			function abreImagen(e){
+				e.stopPropagation();
+				
+				$("#imagenGrande").fadeIn(1000);
+				$("#imgSustitucion").replaceWith("<img src='" + e.data + "' width='700' height='405'>");
+			}
+			
+			$(document).bind("click keypress", function(){
+				$("#imagenGrande").fadeOut(1000);
+			});
+			
+			
+        </script>
+        
+	</head>
+
+	<body>
+    	<div id="imagenGrande"><img src="" id="imgSustitucion"></div>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor vulputate ex. Nunc posuere pretium risus, eget accumsan lorem facilisis at. Quisque sed magna eros. Curabitur finibus elementum semper. Etiam congue mauris aliquam magna commodo pharetra ac ut nulla. Quisque volutpat vel eros eget mattis. Sed cursus justo dui, ac imperdiet neque semper vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius, diam a imperdiet interdum, ligula leo lobortis sem, at aliquet eros nisl at lorem. Praesent porttitor blandit dolor ut accumsan. Curabitur venenatis ante sit amet fringilla convallis. Praesent pellentesque nisi sit amet neque cursus, ut auctor felis accumsan.</p>
+        
+        <p>Donec facilisis mi fermentum, tincidunt elit quis, rutrum sapien. Suspendisse venenatis nulla vitae dolor pharetra pretium. Vestibulum congue arcu a ligula vehicula venenatis. Donec commodo, mi in molestie scelerisque, augue nunc sagittis justo, in ullamcorper sapien elit sed metus. Fusce posuere efficitur felis vitae euismod. Maecenas eu ipsum in lectus laoreet ultricies id sit amet eros. Morbi imperdiet viverra nunc, vitae ullamcorper nunc volutpat vitae. Vivamus ligula massa, feugiat et vestibulum id, semper in quam. Morbi nec dictum ex, a tempor urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque eu feugiat tellus.</p>
+        
+        <table border = "0">
+        	<tr>
+            	<td><img src="Imagenes/slipknot.jpg" width="150" height="100" id = "imagen1"></td>
+            </tr>
+        </table>
+        
+        <p>Suspendisse congue sollicitudin libero, eget maximus ipsum vehicula at. Sed lectus velit, vehicula non tortor ac, malesuada ultrices magna. Maecenas sit amet condimentum sem. Aliquam vulputate nisi id accumsan viverra. Ut mollis lacus non leo rutrum, nec euismod nibh congue. Pellentesque a molestie orci. Praesent imperdiet nec elit nec dapibus. Praesent a molestie elit, et venenatis ipsum.</p>
+        
+        <p>In sagittis urna erat, id viverra lectus euismod sed. Nunc eleifend eleifend posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque, eros ac finibus lacinia, massa orci convallis risus, ac eleifend neque risus a purus. Aenean nec sem lorem. Fusce consequat dignissim orci vitae venenatis. Aliquam erat volutpat. Morbi euismod, massa vel tempus porta, ante ex tincidunt tellus, non aliquet eros ipsum non ex. Nulla semper sem id diam porttitor condimentum. Nunc eleifend ornare felis sed tincidunt. Donec efficitur arcu magna, vel porttitor nunc aliquet ac.</p>
+        
+        <p>Sed ultrices ullamcorper aliquet. Suspendisse accumsan at orci quis dapibus. Phasellus eu ex commodo, maximus magna at, maximus augue. Proin risus mi, lobortis vitae purus ut, feugiat dictum quam. Etiam lobortis lectus a tincidunt molestie. Fusce consequat metus augue, in laoreet orci pulvinar non. Maecenas urna dui, posuere quis orci eget, laoreet pellentesque dui. Nunc gravida, dolor luctus viverra laoreet, augue felis tincidunt nulla, in laoreet enim est vitae eros. Aliquam luctus faucibus eleifend. Phasellus id nunc sit amet ex sagittis eleifend in non mi. Duis aliquet, tortor viverra pulvinar dapibus, tellus sapien fermentum elit, quis venenatis ipsum nisl sed elit. Ut metus urna, pellentesque et sagittis sed, pulvinar mattis turpis. Integer consequat ac orci sed varius. Nunc id ante a dolor ullamcorper vehicula.</p>
+	</body>
+</html>
