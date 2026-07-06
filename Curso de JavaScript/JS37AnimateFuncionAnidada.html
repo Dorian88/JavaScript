@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Funciones Anidadas</title>
+        
+        <style>
+			#titulo{
+				margin-left: 150px;
+			}
+			
+			#foto p{
+				background-color: #000;
+				color: #FFF;
+				font-size: 24px;
+				text-align: center;
+				font-weight: bold;
+				width: 300px;
+			}
+			
+			h1{
+				text-align: center;
+			}
+        </style>
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                $("#titulo").hide();
+				
+				$("#foto img").width(60).height(40).click(function(){
+						$(this).animate({
+								marginLeft: "150px",
+								width: "250px",
+								height: "250px"
+							}, 3000, function(){
+									$("#titulo").fadeIn(2000).delay(1000).fadeOut(1000);
+								}).delay(3000);//Termina animate
+						$(this).animate({
+								marginLeft: "0px",
+								width: "60px",
+								height: "40px"
+							}, 3000);
+					});//Termina click
+            });//Termina ready
+        </script>
+        
+	</head>
+
+	<body>
+    	<h1>Prueba Imagen</h1>
+        
+        <div id="foto">
+        	<img src="Imagenes/Krillin Falcon.jpg" width="250" height="250">
+            
+            <p id="titulo">Krillin Falcon</p>
+        </div>
+	</body>
+</html>

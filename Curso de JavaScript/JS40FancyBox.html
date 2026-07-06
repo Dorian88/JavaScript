@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Imagenes con FancyBox</title>
+        
+        <link rel="stylesheet" href="Css/CssJS40.css">
+        <link rel="stylesheet" href="Jquery/fancybox/jquery.fancybox-1.3.4.css">
+        
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        <script src="Jquery/fancybox/jquery.fancybox-1.3.4.js"></script>
+        <script src="Jquery/jquery.easing.1.3.js"></script>
+        
+		<script>
+			$(document).ready(function() {
+                $("#galeria a").fancybox({
+					overlayColor:"#797e79",
+					overlayOpacity: .6,
+					transitionIn: "elastic",
+					transitionOut: "elastic",
+					easingIn:"easeInSine",
+					titlePosition: "Outside",
+					cyclic: true,
+					speedIn: 1000
+				});
+            });
+        </script>
+        
+	</head>
+
+	<body>
+    	<div class="cabecera">
+        	<img src="Imagenes/Silueta cara.jpg" width="60px" height="60px">
+            <p class="logo">Galería</p>
+        </div>
+        
+        <div class="contenido">
+        	<div class="principal">
+            	<h1>Fotos</h1>
+            	<div id="galeria">
+            		<a href = "Imagenes/slipknot.jpg" rel="gallery" title="Slipknot">
+                	<img src="Imagenes/slipknot.jpg" width="70" height="70" alt="Banda de Dest Moind"></a>
+                	<a href = "Imagenes/Jhon Wick.jpg" rel="gallery" title="Jhon Wick">
+                	<img src="Imagenes/Jhon Wick.jpg" width="70" height="70" alt="El Chuck Norris Moderno"></a>
+                	<a href = "Imagenes/Krillin Falcon.jpg" rel="gallery" title="Krillin Falcon">
+                	<img src="Imagenes/Krillin Falcon.jpg" width="70" height="70" alt="Krillin como uno de los superheroes de Marvel"></a>
+                	<a href = "Imagenes/Lobo.jpeg" rel="gallery" title="Lobo">
+                	<img src="Imagenes/Lobo.jpeg" width="70" height="70" alt="Imagen de un Lobo"></a>
+                	<a href = "Imagenes/Mario.jpeg" rel="gallery" title="Mario Bross">
+                	<img src="Imagenes/Mario.jpeg" width="70" height="70" alt="Imagen del fontanero Mario"></a>
+            	</div>
+           </div>
+        </div>
+	</body>
+</html>
