@@ -7,13 +7,18 @@
         <script src="Jquery/jquery-1.6.3.min.js"></script>
         
 		<script>
-			$(document).ready(function() {
-                
+			$(document).ready(function(e) {
+                var propVen = "width = 300, height=200, left=300, top=300";
+				var miVentana = open("https://www.pildorasinformaticas.es", "Pildoras", propVen);
+				
+				$("#botonCerrar").click(function(e){
+					e.preventDefault();
+					miVentana.close();
+				});
             });
 			
-			open("https://www.pildorasinformaticas.es", "Pildoras", "width = 300, height=200, left=300, top=300");
-			open("https://www.pildorasinformaticas.es", "Pildoras2", "width = 300, height=200, left=600, top=100");
-			open("https://www.pildorasinformaticas.es", "Pildoras3", "width = 300, height=200, left=900, top=500");
+			
+			
         </script>
         
 	</head>
