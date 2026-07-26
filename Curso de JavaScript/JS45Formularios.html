@@ -27,6 +27,10 @@
 		<script src="Jquery/jquery-1.6.3.min.js"></script>
 
 		<script>
+		
+			var miArray = new Array();
+			var i = 0;
+			
 			$(document).ready(function() {
 				
 				$("#nombre").focus(function(){
@@ -53,6 +57,21 @@
 						$(this).focus();
 						$(this).val("");
 					}
+				});
+				
+				$(":radio").click(function(){
+					alert($(this).val());
+				});
+				
+				$(":checkbox").click(function(){
+					miArray[i] = ($(this).val());
+					
+					$("#lasAficiones").append(miArray[i]).append("<br>");
+					i++;
+				});
+				
+				$("#pais").change(function(){
+					alert("País de residencia" + ": " + $(this).val());
 				});
 			});
 			
@@ -111,23 +130,23 @@
                         	<table width="200">
         						<tr>
           							<td>
-                            			<label><input type="checkbox" name="deporte" value="Deporte" id="deporte">deporte</label>
+                            			<label><input type="checkbox" name="deporte" value="Deporte" id="deporte">Deporte</label>
                             		</td>
           							<td>
                             			<label>
                             				<input type="checkbox" name="informatica" value="Informática" id="informatica">
-                                        	informatica
+                                        	Informatica
                                 		</label>
                             		</td>
         						</tr>
         						<tr>
           							<td>
-                                    	<label><input type="checkbox" name="lectura" value="Lectura" id="lectura">lectura</label>	
+                                    	<label><input type="checkbox" name="lectura" value="Lectura" id="lectura">Lectura</label>	
                                     </td>
-          							<td><label><input type="checkbox" name="cine" value="Cine" id="cine">cine</label></td>
+          							<td><label><input type="checkbox" name="cine" value="Cine" id="cine">Cine</label></td>
         						</tr>
         						<tr>
-          							<td><label><input type="checkbox" name="bares" value="Bares" id="bares">bares</label></td>
+          							<td><label><input type="checkbox" name="bares" value="Bares" id="bares">Bares</label></td>
           							<td>
                             			<label>
                                 			<input type="checkbox" name="naturaleza" value="Naturaleza" id="naturaleza">
@@ -145,6 +164,8 @@
   				</table>
   			</form>
 		</div>
+        
+        <div id="lasAficiones"></div>
 
 	</body>
 </html>
